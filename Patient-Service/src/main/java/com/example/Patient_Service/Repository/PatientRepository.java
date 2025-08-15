@@ -1,0 +1,11 @@
+package com.example.Patient_Service.Repository;
+
+import com.example.Patient_Service.Model.Patient;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+@Repository
+public interface PatientRepository extends JpaRepository<Patient, UUID> {
+    Boolean findByEmail(String email);
+}
